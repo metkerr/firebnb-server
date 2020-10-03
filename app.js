@@ -8,10 +8,13 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/firebnb_db", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://firebnb:firebnb123@cluster0.5hvpr.mongodb.net/firebnb_db?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");

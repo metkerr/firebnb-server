@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-  "mongodb://127.0.0.1:27017/firebnb_db",
+  "mongodb+srv://firebnb:firebnb123@cluster0.5hvpr.mongodb.net/firebnb_db?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -1026,18 +1026,18 @@ var data = [
         invoice: 1231231,
         itemId: {
           _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
-          title: "Village Angga",
-          price: 6,
+          title: "Log Cabin",
+          price: 275,
           duration: 2,
         },
         total: 12,
         memberId: mongoose.Types.ObjectId("5e96cbe292b97300fc903333"),
         bankId: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         payment: {
-          paymentProof: "images/bukti.jpeg",
-          originatingBank: "BCA",
-          status: "Proses",
-          accountHolder: "Lloyd",
+          paymentProof: "images/buktibayar.JPG",
+          originatingBank: "Bank of Bolivia",
+          status: "Process",
+          accountHolder: "El Sueno",
         },
       },
     ],
@@ -1050,17 +1050,17 @@ var data = [
     documents: [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903333"),
-        firstName: "Elfin",
-        lastName: "Sanjaya",
-        email: "elfinsanjaya12@gmail.com",
-        phoneNumber: "082377954008",
+        firstName: "El",
+        lastName: "Sueno",
+        email: "elsueno@thecarte.coca",
+        phoneNumber: "0548744587",
       },
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903334"),
-        firstName: "Yein",
-        lastName: "Narayana",
-        email: "elfinsanjaya1207@gmail.com",
-        phoneNumber: "082377954008",
+        firstName: "Gusti",
+        lastName: "Faizal",
+        email: "gustifaizalsani8@gmail.com",
+        phoneNumber: "08254858487",
       },
     ],
   },
@@ -1089,12 +1089,12 @@ var data = [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903345"),
         username: "admin",
-        password: "rahasia",
+        password: "admin",
       },
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903346"),
         username: "superadmin",
-        password: "rahasia",
+        password: "admin",
         role: "admin",
       },
     ],
