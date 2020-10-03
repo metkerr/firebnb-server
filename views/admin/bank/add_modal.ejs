@@ -1,0 +1,68 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="add-modal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Bank</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/admin/bank" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name">Bank Name</label>
+            <input
+              type="text"
+              placeholder="Enter bank name"
+              class="form-control"
+              name="bankName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Account Number</label>
+            <input
+              type="text"
+              placeholder="Enter account number"
+              class="form-control"
+              name="accountNumber"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder="Enter name"
+              class="form-control"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="Bank Logo">Bank Logo</label>
+            <input type="file" class="form-control" name="image" required />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

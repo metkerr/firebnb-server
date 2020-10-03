@@ -1,0 +1,78 @@
+<div
+  class="tab-pane fade"
+  id="nav-add-item"
+  role="tabpanel"
+  aria-labelledby="nav-add-item-tab"
+>
+  <div class="card shadow mb-4 mt-2">
+    <div class="card-body">
+      <form action="/admin/item" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            placeholder="Item title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            placeholder="Item price"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select name="country" class="form-control">
+            <option value="">Select Country</option>
+            <% for(country in countryData){ %>
+            <option value="<%= country %>"><%= country %></option>
+            <% } %>
+          </select>
+        </div>
+        <p id="test"></p>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input
+            type="text"
+            class="form-control"
+            name="city"
+            placeholder="City"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">category</label>
+          <select name="categoryId" class="form-control">
+            <option value="">Select Category</option>
+            <% for(category of category){ %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+            <% } %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="image">image</label>
+          <input
+            type="file"
+            class="form-control"
+            name="image"
+            placeholder="Item image"
+            multiple
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">description</label>
+          <textarea name="about" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div
+  class="tab-pane fade show active"
+  id="nav-show-feature"
+  role="tabpanel"
+  aria-labelledby="nav-show-feature-tab"
+>
+  <div class="card shadow mb-4 mt-2">
+    <div class="card-header py-3">
+      <a href="/admin/booking/" class="btn btn-secondary">Back</a>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://localhost:3000/<%= booking.payment.paymentProof %>"
+            alt="booking payment proof"
+            style="width: 100%; display: block; filter: grayscale(100)"
+          />
+          <% if(booking.payment.status === 'Process'){ %>
+          <div class="row mt-3 ml-3">
+            <form
+              action="/admin/booking/<%= booking.id %>/reject"
+              method="POST"
+              class="mr-3"
+            >
+              <button type="submit" class="btn btn-danger btn-sm">
+                <i class="fas fa-times"></i> Reject
+              </button>
+            </form>
+            <form
+              action="/admin/booking/<%= booking.id %>/accept"
+              method="POST"
+            >
+              <button type="submit" class="btn btn-success btn-sm">
+                <i class="fas fa-check"></i> Confirm
+              </button>
+            </form>
+          </div>
+          <% } %>
+        </div>
+        <div class="col-md-8">
+          <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+              <tbody>
+                <tr>
+                  <th width="150">Nama</th>
+                  <td>
+                    <%= booking.memberId.firstName %> <%=
+                    booking.memberId.lastName %>
+                  </td>
+                </tr>
+                <tr>
+                  <th width="150">Total</th>
+                  <td>$<%= booking.total %></td>
+                </tr>
+                <tr>
+                  <th width="150">Bank</th>
+                  <td><%= booking.payment.originatingBank %></td>
+                </tr>
+                <tr>
+                  <th width="150">Accommodation</th>
+                  <td><%= booking.itemId.title %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
