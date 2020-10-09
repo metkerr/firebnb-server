@@ -124,7 +124,7 @@ module.exports = {
       originatingBank === undefined
     ) {
       return res
-        .status(404)
+        .status(500)
         .json({ message: "Please fill all the data fields !" });
     }
 
