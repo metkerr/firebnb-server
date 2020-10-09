@@ -32,6 +32,12 @@ npm run dev
 
 <br>
 
+## **Demo**
+
+username: **admin**
+
+password: **admin**
+
 ### **[Firebnb Sysadmin Demo 🔗](https://firebnb-sysadmin.herokuapp.com/)**
 
 <br>
