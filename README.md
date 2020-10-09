@@ -2,7 +2,7 @@
 
 This is the sysadmin & API server of Firebnb APP.
 
-Go to [Firebnb React App Repository 🔗](https://github.com/metkerr/firebnb-server).
+Go to [Firebnb React App Repository 🔗](https://github.com/metkerr/firebnb-server), to see the react app repository.
 
 ## **Tech Stack**
 
