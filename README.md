@@ -1,4 +1,4 @@
-<h2 align="center"> <strong>FIREBNB REACT APP</strong></h2>
+<h2 align="center"> <strong>FIREBNB Syadmin & API Server</strong></h2>
 
 This is the sysadmin & API server of Firebnb APP.
 
